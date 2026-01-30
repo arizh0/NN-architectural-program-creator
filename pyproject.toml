@@ -5,15 +5,26 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "nn-archi"
 version = "0.1.0"
-description = "Neural-network-assisted rectangular layout solver for architectural space planning."
+description = "Neural-network-assisted rectangular layout solver for architectural space planning from program and relationship-matrix data."
 readme = "README.md"
 requires-python = ">=3.10"
+keywords = [
+  "architecture",
+  "space-planning",
+  "layout-optimization",
+  "computational-design",
+  "pytorch",
+  "graph-neural-network",
+]
 dependencies = [
   "matplotlib>=3.8",
   "numpy>=1.26",
   "pandas>=2.2",
   "torch>=2.2",
 ]
+
+[project.urls]
+Repository = "https://github.com/arizh0/NN-architectural-program-creator"
 
 [project.scripts]
 nn-archi-layout = "nn_archi.layout_solver:main"
