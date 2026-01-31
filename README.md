@@ -1,6 +1,6 @@
-# NN Archi
+# Architectural Layout Solver
 
-NN Archi is a neural-network-assisted rectangular layout solver for architectural space planning.
+Architectural Layout Solver is a neural-network-assisted rectangular layout solver for architectural space planning.
 
 It takes a space program table plus a relationship matrix, selects a working subset of spaces, and fits them into a long rectangular planning envelope while balancing adjacency strength, overlap avoidance, bounds, and corridor access. The repository currently focuses on the layout engine only.
 
@@ -18,7 +18,7 @@ This project is source-available for non-commercial use only. Commercial use req
 
 ## Repository Structure
 
-- `src/nn_archi/layout_solver.py` - main solver and CLI
+- `src/architectural_layout_solver/layout_solver.py` - main solver and CLI
 - `data/sample/spaces.csv` - sample space program dataset
 - `data/sample/relationships.csv` - sample relationship matrix
 - `outputs/layouts/` - generated outputs
@@ -37,19 +37,19 @@ pip install -e .
 Run with the bundled sample dataset:
 
 ```bash
-nn-archi-layout --rect-length 400
+architectural-layout-solver --rect-length 400
 ```
 
 Or run the module directly:
 
 ```bash
-python -m nn_archi.layout_solver --rect-length 400
+python -m architectural_layout_solver.layout_solver --rect-length 400
 ```
 
 Example with a custom output directory and feasibility pruning:
 
 ```bash
-python -m nn_archi.layout_solver ^
+python -m architectural_layout_solver.layout_solver ^
   --rect-length 400 ^
   --n_spaces 60 ^
   --drop_until_fit ^

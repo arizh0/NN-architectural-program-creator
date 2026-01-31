@@ -1,0 +1,1 @@
+"""Architectural Layout Solver package."""
